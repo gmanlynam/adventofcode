@@ -5,7 +5,7 @@ fn main() {
 fn process_input(starting:i32, commands: &str) -> i32 {
     let mut count = starting;
     for command in commands.split(',') {
-        let result: i32 = command.parse().unwrap();
+        let result: i32 = command.trim().parse().unwrap();
         count += result;
     }
     println!("{}", count);
